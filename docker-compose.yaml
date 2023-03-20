@@ -20,7 +20,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./nginx/default.conf:/etc/nginx:ro
+      - ./nginx/default.conf:/etc/nginx
     depends_on:
       - backend
       - frontend

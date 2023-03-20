@@ -21,6 +21,7 @@ services:
 
   backend:
     build: ../pythonSite/Site/smsSite
+    command: sh entrypoint.sh
     container_name: backend
     volumes:
       - ./app/:/usr/src/app/

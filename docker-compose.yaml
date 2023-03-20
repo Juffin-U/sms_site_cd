@@ -1,6 +1,24 @@
 version: '3'
 services:
 
+  db:
+    image: postgres:15-alpine
+    restart: always
+    container_name: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=o2Juwcjsnx
+      - POSTGRES_DB=smsProject
+    logging:
+      options:
+        max-size: 10m
+        max-file: "3"
+    ports:
+      - '5438:5432'
+    volumes:
+      - postgres_data:/data/postgres
+
+
   backend:
     build: ../pythonSite/Site/smsSite
     container_name: backend
@@ -24,5 +42,9 @@ services:
     depends_on:
       - backend
       - frontend
+
+volumes:
+  postgres_data:
+    driver: local
 
 

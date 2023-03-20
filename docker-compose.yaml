@@ -5,7 +5,7 @@ services:
     build: ../pythonSite/Site/smsSite
     container_name: backend
     volumes:
-      - .:/usr/src/app/
+      - ./app/:/usr/src/app/
     ports:
       - "8000:8000"
 

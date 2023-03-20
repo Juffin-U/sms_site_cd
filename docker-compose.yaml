@@ -13,7 +13,7 @@ services:
     build: ../smsSite_frontend
     container_name: frontend
     ports:
-      - "3000:3000"
+      - "8080:8080"
 
   nginx:
     image: nginx:latest

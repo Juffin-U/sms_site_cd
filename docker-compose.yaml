@@ -2,7 +2,7 @@ version: '3'
 services:
 
   backend:
-    build: ../pythonSite/Site
+    build: ../pythonSite/Site/smsSite
     container_name: backend
     volumes:
       - .:/app
